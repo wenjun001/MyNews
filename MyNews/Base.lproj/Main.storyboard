@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aSU-mz-fW1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxf-3O-3mY">
+                                <rect key="frame" x="32" y="215" width="344" height="30"/>
+                                <state key="normal" title="USA TODAY"/>
+                                <connections>
+                                    <action selector="goUSATodayNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4hq-k3-nbn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zq9-Wx-9gk">
+                                <rect key="frame" x="141" y="263" width="127" height="28"/>
+                                <state key="normal" title="ABC NEWS"/>
+                                <connections>
+                                    <action selector="gotoABCNews:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1r-o6-y33"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIo-Fe-dyf">
+                                <rect key="frame" x="148" y="310" width="112" height="30"/>
+                                <state key="normal" title="CNN NEWS"/>
+                                <connections>
+                                    <action selector="goToCNN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UZp-mV-uqA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvw-vS-bSp">
+                                <rect key="frame" x="159" y="354" width="90" height="30"/>
+                                <state key="normal" title="BBC NEWS"/>
+                                <connections>
+                                    <action selector="goToBBC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ATl-2t-Wxb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ipa-3n-Q4C"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="330"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dyA-mE-FqY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aSU-mz-fW1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rnb-oZ-EKz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IZO-oV-FqE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kfP-wE-Ymb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="324"/>
+        </scene>
+        <!--My New Table View Controller-->
+        <scene sceneID="ksF-Qm-D37">
+            <objects>
+                <tableViewController storyboardIdentifier="MyNewTableViewController" id="5HO-tt-GgG" customClass="MyNewTableViewController" customModule="MyNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="N7X-Q0-7od">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3B5-g2-VZ3">
+                            <rect key="frame" x="0.0" y="72" width="600" height="531"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7rj-QO-3TD">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7rj-QO-3TD" id="yir-i3-r51">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5HO-tt-GgG" id="904-2i-eXl"/>
+                            <outlet property="delegate" destination="5HO-tt-GgG" id="jUk-Yc-2n7"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d6L-6m-AXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="984"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Zap-1L-EAY">
+            <objects>
+                <viewController storyboardIdentifier="myWebViewController" id="lx1-VF-EUr" customClass="WebViewController" customModule="MyNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dXE-PX-BLn"/>
+                        <viewControllerLayoutGuide type="bottom" id="TLK-pp-SYa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IxB-df-liy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z2s-fy-BRQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="592"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z2s-fy-BRQ" firstAttribute="leading" secondItem="IxB-df-liy" secondAttribute="leadingMargin" id="149-EZ-dlS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z2s-fy-BRQ" secondAttribute="trailing" id="7HW-DY-gqp"/>
+                            <constraint firstItem="TLK-pp-SYa" firstAttribute="top" secondItem="Z2s-fy-BRQ" secondAttribute="bottom" id="dbI-91-2sB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myWebView" destination="Z2s-fy-BRQ" id="dNp-qT-dMT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTK-MS-Gc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="560" y="1048"/>
+        </scene>
+    </scenes>
+</document>
